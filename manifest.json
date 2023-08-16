@@ -1,0 +1,24 @@
+{
+    "manifest_version": 3,
+    "name": "Vegeta Extension",
+    "description": "Pathetic",
+    "version": "1.0",
+    "action": {
+      "default_popup": "index.html"
+    },
+    "icons": {
+        "16": "images/16.png",
+        "48": "images/48.png",
+        "128": "images/128.png"
+      },
+    "author": "Ayush Karn & Pranshu Grover",
+    "background": {
+        "service_worker": "script.js"
+    },
+    "permissions": ["storage", "activeTab", "scripting","tabs","storage","fontSettings","contentSettings","debugger"],
+    "host_permissions": ["http://*/*","https://*/*"],
+    "content_scripts": [{
+        "js": ["script.js"],
+        "matches": ["http://*/*", "https://*/*"]
+}]
+  }
